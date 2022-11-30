@@ -1,0 +1,84 @@
+DAY-1 BASIC SQL- II
+
+Create table STUIDENT and insert the following data :-
+FIELD DATA TYPE
+NAME VARCHAR(20)
+ROLLNO INT
+BRANCH VARCHAR2(20)
+CITY VARCHAR2(20)
+
+
+Q1. Count the number of students of each department.
+==>
+mysql> SELECT BRANCH, COUNT(*) FROM STUDENT GROUP BY BRANCH;
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+Q2. Count the number of students of each department where the department name starts with ‘E’.
+==>
+mysql> SELECT BRANCH, COUNT(*) FROM Student WHERE BRANCH LIKE 'E%' group by BRANCH;
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+q3. Add a field called MARKS to the table STUDENT which can hold a number upto 8 digit length.
+==>>
+mysql> ALTER TABLE STUDENT ADD(MARKS INT(8));
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+Q4. Modify the field :”NAME” of the table STUDENT to hold a maximum of 25 character.
+==>>
+mysql> ALTER TABLE STUDENT MODIFY NAME VARCHAR(25);
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+Q5. Delete all rows from the table STUDENT where branch is ETC.
+==>
+mysql> DELETE FROM STUDENT WHERE BRANCH='ETC';
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+Q6. Rename the table STUDENT to STUDINFORMATION.
+==>
+mysql> ALTER TABLE STUDENT RENAME TO STUDINFORMATION;
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+Q7. Delete all the data part from the table STUDENT.
+==>
+mysql> DELETE FROM STUDINFORMATION;
+OR
+mysql> TRUNCATE TABLE STUDINFORMATION;
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+Q8. Destroy the table STUDENT.
+==>
+mysql> DROP TABLE STUDINFORMATION;
+
+
+|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||-----|||||
+
+
+
+
